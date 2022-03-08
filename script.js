@@ -1,3 +1,9 @@
+for(let i=0; i<16; i++) {
+    sqr = document.createElement('div');
+    sqr.setAttribute('id', 'sqr');
+    sqrGrid = document.getElementById('sqrGrid');
+    sqrGrid.appendChild(sqr);
+}
 for(let i=0; i<25; i++) {
     dot = document.createElement('div');
     dot.setAttribute('id', 'dot');
@@ -29,9 +35,7 @@ for(let i=0; i<20; i++) {
  
 function clk() {
     this.style.background = 'red';
-    console.log(`My class name is ${this.className}`);
     this.className = 'clk';
-    console.log(`My class name is ${this.className}`);
 }
 function hvr() {
     if(this.className === 'unclk') {

@@ -9,3 +9,6 @@ Same process as that for adding the vertical grid lines.
 
 can click to add line
 I used the loops to add event listeners that when clicked change the color of the line from gray to red.
+
+can hover to preview line
+I used event listeners again that when hovered over change the color of the line from gray to light gray.

@@ -7,12 +7,45 @@ body {
     background: #4a4b4c;
 
 }
-#dotGrid {
+#sqrGrid {
     /* position */
     margin: 5rem auto;
 
     /* size */
     max-width: 20rem;
+
+    /* appearance */
+    /* background: red; */
+
+    /* child position */
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+
+    /* child size */
+    
+    /* child appearance */
+
+}
+#sqr {
+    /* position */
+    margin: 0 auto;
+    
+    /* size */
+    width: 5rem;
+    height: 5rem;
+
+    /* appearance */
+    /* outline: 5px solid black; */
+    background: #4a4b4c;
+
+}
+#dotGrid {
+    /* position */
+    margin: -27.5rem auto;
+
+    /* size */
+    max-width: 25rem;
 
     /* appearance */
     /* background: red; */
@@ -29,7 +62,7 @@ body {
 }
 #dot {
     /* position */
-    margin: 1.5rem auto;
+    margin: 2.25rem auto;
     
     /* size */
     width: 0.5rem;
@@ -37,15 +70,15 @@ body {
 
     /* appearance */
     border-radius: 0.25rem;
-    background: #ababab;
+    background: greenyellow;
 
 }
 #vrtGrid {
     /* position */
-    margin: -20.75rem auto;
+    margin: 5rem auto;
 
     /* size */
-    max-width: 20rem;
+    max-width: 25rem;
 
     /* appearance */
     /* background: red; */
@@ -66,7 +99,7 @@ body {
     
     /* size */
     width: 0.5rem;
-    height: 3rem;
+    height: 4.5rem;
 
     /* appearance */
     border-radius: 0.25rem;
@@ -75,10 +108,10 @@ body {
 }
 #hrzGrid {
     /* position */
-    margin: 5rem auto;
+    margin: -27.5rem auto;
 
     /* size */
-    max-width: 16rem;
+    max-width: 20rem;
 
     /* appearance */
 
@@ -96,10 +129,10 @@ body {
 }
 #hrz {
     /* position */
-    margin: 1.5rem auto;
+    margin: 2.25rem auto;
     
     /* size */
-    width: 3.5rem;
+    width: 4.5rem;
     height: 0.5rem;
 
     /* appearance */
