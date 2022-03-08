@@ -42,7 +42,7 @@ body {
 }
 #vrtGrid {
     /* position */
-    margin: -21.2rem auto;
+    margin: -20.75rem auto;
 
     /* size */
     max-width: 20rem;
@@ -53,7 +53,7 @@ body {
     /* child position */
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
 
     /* child size */
     
@@ -62,14 +62,48 @@ body {
 }
 #vrt {
     /* position */
-    margin: 0.75rem auto;
+    margin: 0.25rem auto;
     
     /* size */
     width: 0.5rem;
-    height: 2.9rem;
+    height: 3rem;
 
     /* appearance */
     border-radius: 0.25rem;
     background: red;
+
+}
+#hrzGrid {
+    /* position */
+    margin: 5rem auto;
+
+    /* size */
+    max-width: 16rem;
+
+    /* appearance */
+
+    /* background: red; */
+
+    /* child position */
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+
+    /* child size */
+    
+    /* child appearance */
+
+}
+#hrz {
+    /* position */
+    margin: 1.5rem auto;
+    
+    /* size */
+    width: 3.5rem;
+    height: 0.5rem;
+
+    /* appearance */
+    border-radius: 0.25rem;
+    background: blue;
 
 }
