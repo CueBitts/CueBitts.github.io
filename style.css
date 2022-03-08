@@ -70,7 +70,7 @@ body {
 
     /* appearance */
     border-radius: 0.25rem;
-    background: red;
+    background: #4a4b4c;
 
 }
 #hrzGrid {
@@ -104,6 +104,6 @@ body {
 
     /* appearance */
     border-radius: 0.25rem;
-    background: blue;
+    background: #4a4b4c;
 
 }
