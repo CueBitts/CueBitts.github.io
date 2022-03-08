@@ -1,0 +1,42 @@
+body {
+    /* position */
+
+    /* size */
+    
+    /* appearance */
+    background: #4a4b4c;
+
+}
+#dotGrid {
+    /* position */
+    margin: 5rem auto;
+
+    /* size */
+    max-width: 20rem;
+
+    /* appearance */
+    /* background: red; */
+
+    /* child position */
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+
+    /* child size */
+    
+    /* child appearance */
+
+}
+#dot {
+    /* position */
+    margin: 1.5rem auto;
+    
+    /* size */
+    width: 0.5rem;
+    height: 0.5rem;
+
+    /* appearance */
+    border-radius: 0.25rem;
+    background: #ababab;
+
+}
