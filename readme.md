@@ -6,3 +6,6 @@ I used a similar process to make the vertical lines of the grid. They will have 
 
 horizontal grid lines exist
 Same process as that for adding the vertical grid lines. 
+
+can click to add line
+I used the loops to add event listeners that when clicked change the color of the line from gray to red.
