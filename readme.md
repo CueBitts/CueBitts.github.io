@@ -12,3 +12,6 @@ I used the loops to add event listeners that when clicked change the color of th
 
 can hover to preview line
 I used event listeners again that when hovered over change the color of the line from gray to light gray.
+
+lines are added in better order for array
+I changed the way the lines were added to nested for loops that will correspond to its location in the array.

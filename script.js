@@ -1,5 +1,6 @@
 for(let i=0; i<16; i++) {
     sqr = document.createElement('div');
+    sqr.className = `${i}`;
     sqr.setAttribute('id', 'sqr');
     sqrGrid = document.getElementById('sqrGrid');
     sqrGrid.appendChild(sqr);
@@ -17,6 +18,7 @@ for(let i=0; i<9; i++) {
             hrz.className = 'unclk';
             hrz.setAttribute('id', 'hrz');
             hrzGrid = document.getElementById('hrzGrid');
+            hrz.setAttribute('name', `${i}${j}`);
             hrzGrid.appendChild(hrz);
         
             hrz.addEventListener('click', clk);
@@ -29,6 +31,7 @@ for(let i=0; i<9; i++) {
             vrt = document.createElement('div');
             vrt.className = 'unclk';
             vrt.setAttribute('id', 'vrt');
+            vrt.setAttribute('name', `${i}${j}`);
             vrtGrid = document.getElementById('vrtGrid');
             vrtGrid.appendChild(vrt);
         
@@ -42,6 +45,9 @@ for(let i=0; i<9; i++) {
 function clk() {
     this.style.background = 'red';
     this.className = 'clk';
+
+    idx = this.getAttribute('name');
+    arr[idx.charAt(0)][idx.charAt(1)] = true;
 }
 function hvr() {
     if(this.className === 'unclk') {
@@ -69,40 +75,56 @@ arr = [
     [false, false, false, false],
 ]
 
-/*
-arr[0][0] && arr[1][0] && arr[1][1] && arr[2][0]
-    square 0
-arr[0][1] && arr[1][1] && arr[1][2] && arr[2][1]
-    square 1
-arr[0][2] && arr[1][2] && arr[1][3] && arr[2][2]
-    square 2
-arr[0][3] && arr[1][3] && arr[1][4] && arr[2][3]
-    square 3
+function chk() {
+    if(arr[0][0] && arr[1][0] && arr[1][1] && arr[2][0]) {
+        document.getElementsByClassName('0')[0].style.background = 'red';
+    }
+    if(arr[0][1] && arr[1][1] && arr[1][2] && arr[2][1]) {
+        document.getElementsByClassName('1')[0].style.background = 'red';
+    }
+    if(arr[0][2] && arr[1][2] && arr[1][3] && arr[2][2]) {
+        document.getElementsByClassName('2')[0].style.background = 'red';
+    }
+    if(arr[0][3] && arr[1][3] && arr[1][4] && arr[2][3]) {
+        document.getElementsByClassName('3')[0].style.background = 'red';
+    }
 
-arr[2][0] && arr[3][0] && arr[3][1] && arr[4][0]
-    square 4
-arr[2][1] && arr[3][1] && arr[3][2] && arr[4][1]
-    square 5
-arr[2][2] && arr[3][2] && arr[3][3] && arr[4][2]
-    square 6
-arr[2][3] && arr[3][3] && arr[3][4] && arr[4][3]
-    square 7
+    if(arr[2][0] && arr[3][0] && arr[3][1] && arr[4][0]) {
+        document.getElementsByClassName('4')[0].style.background = 'red';
+    }
+    if(arr[2][1] && arr[3][1] && arr[3][2] && arr[4][1]) {
+        document.getElementsByClassName('5')[0].style.background = 'red';
+    }
+    if(arr[2][2] && arr[3][2] && arr[3][3] && arr[4][2]) {
+        document.getElementsByClassName('6')[0].style.background = 'red';
+    }
+    if(arr[2][3] && arr[3][3] && arr[3][4] && arr[4][3]) {
+        document.getElementsByClassName('7')[0].style.background = 'red';
+    }
 
-arr[4][0] && arr[5][0] && arr[5][1] && arr[6][0]
-    square 8
-arr[4][1] && arr[5][1] && arr[5][2] && arr[6][1]
-    square 9
-arr[4][2] && arr[5][2] && arr[5][3] && arr[6][2]
-    square 10
-arr[4][3] && arr[5][3] && arr[5][4] && arr[6][3]
-    square 11
+    if(arr[4][0] && arr[5][0] && arr[5][1] && arr[6][0]) {
+        document.getElementsByClassName('8')[0].style.background = 'red';
+    }
+    if(arr[4][1] && arr[5][1] && arr[5][2] && arr[6][1]) {
+        document.getElementsByClassName('9')[0].style.background = 'red';
+    }
+    if(arr[4][2] && arr[5][2] && arr[5][3] && arr[6][2]) {
+        document.getElementsByClassName('10')[0].style.background = 'red';
+    }
+    if(arr[4][3] && arr[5][3] && arr[5][4] && arr[6][3]) {
+        document.getElementsByClassName('11')[0].style.background = 'red';
+    }
 
-arr[6][0] && arr[7][0] && arr[7][1] && arr[8][0]
-    square 12
-arr[6][1] && arr[7][1] && arr[7][2] && arr[8][1]
-    square 13
-arr[6][2] && arr[7][2] && arr[7][3] && arr[8][2]
-    square 14
-arr[6][3] && arr[7][3] && arr[7][4] && arr[8][3]
-    square 15
-*/
+    if(arr[6][0] && arr[7][0] && arr[7][1] && arr[8][0]) {
+        document.getElementsByClassName('12')[0].style.background = 'red';
+    }
+    if(arr[6][1] && arr[7][1] && arr[7][2] && arr[8][1]) {
+        document.getElementsByClassName('13')[0].style.background = 'red';
+    }
+    if(arr[6][2] && arr[7][2] && arr[7][3] && arr[8][2]) {
+        document.getElementsByClassName('14')[0].style.background = 'red';
+    }
+    if(arr[6][3] && arr[7][3] && arr[7][4] && arr[8][3]) {
+        document.getElementsByClassName('15')[0].style.background = 'red';
+    }
+}
