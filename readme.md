@@ -18,3 +18,6 @@ I changed the way the lines were added to nested for loops that will correspond 
 
 function that can check if a box is surrounded exists
 I made my pseudo-code into a real function as well as tweaking the initial grid loop so a the grid can be checked for closed boxes.
+
+lines will now alternate color and boxes will fill in with the color that closed them
+I added the gameplay loop and did some debugging to tie together most of the game's functions.

@@ -25,43 +25,6 @@ let bSqr15;
 
 init();
 
-// while(!win && !tie) {
-//     if(trn%2 === 0) {
-//         clr = 'red';
-//     }
-//     else {
-//         clr = 'blue';
-//     }
-
-//     if(rdpts > 8) {
-//         alert('Red Wins!' + `Red: ${rdpts}` + `Blue: ${blpts}`);
-//         win = true;
-//         init();
-//     }
-//     if(blpts > 8) {
-//         alert('Blue Wins!' + `Red: ${rdpts}` + `Blue: ${blpts}`);
-//         win = true;
-//         init();
-//     }
-//     if(rdpts === 8 && rdpts === blpts) {
-//         alert('Tie!');
-//         tie = true;
-//         init();
-//     }
-    
-//     chktrn();
-//     trn++;
-// }
-
-// function chktrn() {
-//     if(trnflg) {
-//         trnflg = false;
-//     }
-//     else {
-//         setTimeout(chktrn, 300);
-//     }
-// }
-
 function init() {
     win = false;
     tie = false;
@@ -69,6 +32,18 @@ function init() {
     rdpts = 0;
     blpts = 0;
     trnflg = false;
+
+    arr = [
+        [false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false],
+    ]
 
     bSqr0 = false;
     bSqr1 = false;
@@ -135,19 +110,19 @@ function init() {
 
 function gme() {
     if(rdpts > 8) {
-        alert('Red Wins!' + `Red: ${rdpts}` + `Blue: ${blpts}`);
+        alert('Red Wins! ' + `Red: ${rdpts} ` + `Blue: ${blpts} Refresh to Play Again.`);
         win = true;
-        init();
+        // init();
     }
     if(blpts > 8) {
-        alert('Blue Wins!' + `Red: ${rdpts}` + `Blue: ${blpts}`);
+        alert('Blue Wins! ' + `Red: ${rdpts} ` + `Blue: ${blpts} Refresh to Play Again.`);
         win = true;
-        init();
+        // init();
     }
     if(rdpts === 8 && rdpts === blpts) {
-        alert('Tie!');
+        alert('Tie! Refresh to Play Again.');
         tie = true;
-        init();
+        // init();
     }
     
     if(trn%2 === 0) {
@@ -158,9 +133,19 @@ function gme() {
     }
 
     if(trnflg) {
-        chk();
+        let pts = chk();
+        if(pts && trn%2 === 0) {
+            rdpts++;
+        }
+        else if(pts) {
+            blpts++;
+        }
+        else {
+            trn++;
+        }
+        console.log(rdpts);
+        console.log(blpts);
         trnflg = false;
-        trn++;
         gme();
     }
     else {
@@ -194,92 +179,92 @@ function clk() {
     }
 }
 
-arr = [
-    [false, false, false, false],
-    [false, false, false, false, false],
-    [false, false, false, false],
-    [false, false, false, false, false],
-    [false, false, false, false],
-    [false, false, false, false, false],
-    [false, false, false, false],
-    [false, false, false, false, false],
-    [false, false, false, false],
-]
-
 function chk() {
     if(arr[0][0] && arr[1][0] && arr[1][1] && arr[2][0] && !bSqr0) {
         sqr0 = document.getElementsByClassName('0')[0];
         sqr0.setAttribute('clr', clr); 
         sqr0.style.background = sqr0.getAttribute('clr');
-        bSqr0 = true; 
+        bSqr0 = true;
+        return true; 
     }
     if(arr[0][1] && arr[1][1] && arr[1][2] && arr[2][1] && !bSqr1) {
         sqr1 = document.getElementsByClassName('1')[0];
         sqr1.setAttribute('clr', clr); 
         sqr1.style.background = sqr1.getAttribute('clr');
-        bSqr1 = true; 
+        bSqr1 = true;
+        return true; 
     }
     if(arr[0][2] && arr[1][2] && arr[1][3] && arr[2][2] && !bSqr2) {
         sqr2 = document.getElementsByClassName('2')[0];
         sqr2.setAttribute('clr', clr); 
         sqr2.style.background = sqr2.getAttribute('clr');
-        bSqr2 = true; 
+        bSqr2 = true;
+        return true; 
     }
     if(arr[0][3] && arr[1][3] && arr[1][4] && arr[2][3] && !bSqr3) {
         sqr3 = document.getElementsByClassName('3')[0];
         sqr3.setAttribute('clr', clr); 
         sqr3.style.background = sqr3.getAttribute('clr');
-        bSqr3 = true; 
+        bSqr3 = true;
+        return true; 
     }
 
     if(arr[2][0] && arr[3][0] && arr[3][1] && arr[4][0] && !bSqr4) {
         sqr4 = document.getElementsByClassName('4')[0];
         sqr4.setAttribute('clr', clr); 
         sqr4.style.background = sqr4.getAttribute('clr');
-        bSqr4 = true; 
+        bSqr4 = true;
+        return true; 
     }
     if(arr[2][1] && arr[3][1] && arr[3][2] && arr[4][1] && !bSqr5) {
         sqr5 = document.getElementsByClassName('5')[0];
         sqr5.setAttribute('clr', clr); 
         sqr5.style.background = sqr5.getAttribute('clr');
-        bSqr5 = true; 
+        bSqr5 = true;
+        return true; 
     }
     if(arr[2][2] && arr[3][2] && arr[3][3] && arr[4][2] && !bSqr6) {
         sqr6 = document.getElementsByClassName('6')[0];
         sqr6.setAttribute('clr', clr); 
         sqr6.style.background = sqr6.getAttribute('clr');
-        bSqr6 = true; 
+        bSqr6 = true;
+        return true; 
     }
     if(arr[2][3] && arr[3][3] && arr[3][4] && arr[4][3] && !bSqr7) {
         sqr7 = document.getElementsByClassName('7')[0];
         sqr7.setAttribute('clr', clr); 
         sqr7.style.background = sqr7.getAttribute('clr');
-        bSqr7 = true; 
+        bSqr7 = true;
+        return true; 
     }
 
     if(arr[4][0] && arr[5][0] && arr[5][1] && arr[6][0] && !bSqr8) {
         sqr8 = document.getElementsByClassName('8')[0];
         sqr8.setAttribute('clr', clr); 
         sqr8.style.background = sqr8.getAttribute('clr');
-        bSqr8 = true; 
+        bSqr8 = true;
+        return true; 
     }
     if(arr[4][1] && arr[5][1] && arr[5][2] && arr[6][1] && !bSqr9) {
         sqr9 = document.getElementsByClassName('9')[0];
         sqr9.setAttribute('clr', clr); 
         sqr9.style.background = sqr9.getAttribute('clr');
-        bSqr9 = true; 
+        bSqr9 = true;
+        return true; 
     }
     if(arr[4][2] && arr[5][2] && arr[5][3] && arr[6][2] && !bSqr10) {
         sqr10 = document.getElementsByClassName('10')[0];
         sqr10.setAttribute('clr', clr);
         sqr10.style.background = sqr10.getAttribute('clr');
         bSqr10 = true;
+        return true;
     }
     if(arr[4][3] && arr[5][3] && arr[5][4] && arr[6][3] && !bSqr11) {
         sqr11 = document.getElementsByClassName('11')[0];
         sqr11.setAttribute('clr', clr);
         sqr11.style.background = sqr11.getAttribute('clr');
         bSqr11 = true;
+        return true;
     }
 
     if(arr[6][0] && arr[7][0] && arr[7][1] && arr[8][0] && !bSqr12) {
@@ -287,23 +272,28 @@ function chk() {
         sqr12.setAttribute('clr', clr);
         sqr12.style.background = sqr12.getAttribute('clr');
         bSqr12 = true;
+        return true;
     }
     if(arr[6][1] && arr[7][1] && arr[7][2] && arr[8][1] && !bSqr13) {
         sqr13 = document.getElementsByClassName('13')[0];
         sqr13.setAttribute('clr', clr);
         sqr13.style.background = sqr13.getAttribute('clr');
         bSqr13 = true;
+        return true;
     }
     if(arr[6][2] && arr[7][2] && arr[7][3] && arr[8][2] && !bSqr14) {
         sqr14 = document.getElementsByClassName('14')[0];
         sqr14.setAttribute('clr', clr);
         sqr14.style.background = sqr14.getAttribute('clr');
         bSqr14 = true;
+        return true;
     }
     if(arr[6][3] && arr[7][3] && arr[7][4] && arr[8][3] && !bSqr15) {
         sqr15 = document.getElementsByClassName('15')[0];
         sqr15.setAttribute('clr', clr);
         sqr15.style.background = sqr15.getAttribute('clr');
         bSqr15 = true;
+        return true;
     }
+    return false;
 }
