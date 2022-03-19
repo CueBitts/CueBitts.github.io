@@ -21,3 +21,6 @@ I made my pseudo-code into a real function as well as tweaking the initial grid 
 
 lines will now alternate color and boxes will fill in with the color that closed them
 I added the gameplay loop and did some debugging to tie together most of the game's functions.
+
+points are counted and player is granted an extra turn for earning one
+I added conditions to tell if a box was filled and by whom to grant players who earn points an extra turn and tally up the winner.
