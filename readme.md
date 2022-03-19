@@ -15,3 +15,6 @@ I used event listeners again that when hovered over change the color of the line
 
 lines are added in better order for array
 I changed the way the lines were added to nested for loops that will correspond to its location in the array.
+
+function that can check if a box is surrounded exists
+I made my pseudo-code into a real function as well as tweaking the initial grid loop so a the grid can be checked for closed boxes.
